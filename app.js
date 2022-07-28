@@ -17,7 +17,6 @@ app.post("/", function(req, res) {
         response.on("data", function(data) {
           const weatherData = JSON.parse(data)
           const temp = weatherData.main.temp
-          const des = weatherData.weather[0].description
           res.send(cityname + " weather is  " + temp)
         })
     })
